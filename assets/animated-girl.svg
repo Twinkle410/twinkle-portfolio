@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%" class="animated-girl-avatar">
+  <defs>
+    <!-- Background Gradient Glow -->
+    <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8a2be2" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    
+    <!-- Hair Gradient -->
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2d1b4e"/>
+      <stop offset="50%" stop-color="#1a0b2e"/>
+      <stop offset="100%" stop-color="#0d0517"/>
+    </linearGradient>
+
+    <!-- Face Skin Gradient -->
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffe4d6"/>
+      <stop offset="100%" stop-color="#f7cbbe"/>
+    </linearGradient>
+
+    <!-- Clothes Gradient -->
+    <linearGradient id="outfitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+
+    <!-- Eye Iris Gradient -->
+    <radialGradient id="irisGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="70%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background Ambient Glow -->
+  <circle cx="100" cy="100" r="90" fill="url(#glowGrad)" />
+
+  <!-- Back Hair -->
+  <path d="M 50 100 C 30 130 35 180 50 200 L 150 200 C 165 180 170 130 150 100 C 150 50 50 50 50 100 Z" fill="url(#hairGrad)"/>
+
+  <!-- Outfit / Shoulders -->
+  <path d="M 40 180 C 40 155 70 145 100 145 C 130 145 160 155 160 180 L 170 200 L 30 200 Z" fill="url(#outfitGrad)"/>
+  <!-- Collar Accent -->
+  <path d="M 85 146 L 100 162 L 115 146 C 105 152 95 152 85 146 Z" fill="#ffffff" opacity="0.9"/>
+
+  <!-- Neck -->
+  <rect x="88" y="125" width="24" height="25" rx="10" fill="#f7cbbe"/>
+
+  <!-- Face Base -->
+  <path d="M 60 85 C 60 130 80 140 100 140 C 120 140 140 130 140 85 C 140 50 60 50 60 85 Z" fill="url(#skinGrad)"/>
+
+  <!-- Ears -->
+  <circle cx="58" cy="88" r="8" fill="#f7cbbe"/>
+  <circle cx="142" cy="88" r="8" fill="#f7cbbe"/>
+
+  <!-- Cheeks / Blush -->
+  <ellipse cx="73" cy="98" rx="8" ry="5" fill="#f43f5e" opacity="0.25"/>
+  <ellipse cx="127" cy="98" rx="8" ry="5" fill="#f43f5e" opacity="0.25"/>
+
+  <!-- Nose -->
+  <path d="M 98 90 Q 100 95 102 90" stroke="#e29d8e" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+  <!-- Mouth / Smile -->
+  <path d="M 90 110 Q 100 120 110 110" stroke="#e11d48" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+  <!-- EYES CONTAINER (Script target) -->
+  <g class="character-eyes">
+    <!-- Left Eye Sclera (White) -->
+    <ellipse class="eye-left" cx="78" cy="82" rx="12" ry="14" fill="#ffffff" stroke="#1e293b" stroke-width="1.5"/>
+    <!-- Right Eye Sclera (White) -->
+    <ellipse class="eye-right" cx="122" cy="82" rx="12" ry="14" fill="#ffffff" stroke="#1e293b" stroke-width="1.5"/>
+
+    <!-- Left Pupil & Iris (Moves with JS) -->
+    <g class="pupil-left" transform="translate(0, 0)">
+      <circle cx="78" cy="82" r="7" fill="url(#irisGrad)"/>
+      <circle cx="78" cy="82" r="3.5" fill="#0f172a"/>
+      <!-- Catchlight Highlights -->
+      <circle cx="75" cy="79" r="2.5" fill="#ffffff"/>
+      <circle cx="80" cy="84" r="1.2" fill="#ffffff"/>
+    </g>
+
+    <!-- Right Pupil & Iris (Moves with JS) -->
+    <g class="pupil-right" transform="translate(0, 0)">
+      <circle cx="122" cy="82" r="7" fill="url(#irisGrad)"/>
+      <circle cx="122" cy="82" r="3.5" fill="#0f172a"/>
+      <!-- Catchlight Highlights -->
+      <circle cx="119" cy="79" r="2.5" fill="#ffffff"/>
+      <circle cx="124" cy="84" r="1.2" fill="#ffffff"/>
+    </g>
+  </g>
+
+  <!-- Eyebrows -->
+  <path d="M 66 68 Q 78 63 88 67" stroke="#2d1b4e" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M 112 67 Q 122 63 134 68" stroke="#2d1b4e" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+  <!-- Front Hair / Bangs -->
+  <path d="M 55 75 C 60 40 140 40 145 75 C 135 55 115 50 100 62 C 85 50 65 55 55 75 Z" fill="url(#hairGrad)"/>
+  <path d="M 58 78 C 50 100 55 130 52 150 C 48 110 52 85 58 78 Z" fill="url(#hairGrad)"/>
+  <path d="M 142 78 C 150 100 145 130 148 150 C 152 110 148 85 142 78 Z" fill="url(#hairGrad)"/>
+</svg>
